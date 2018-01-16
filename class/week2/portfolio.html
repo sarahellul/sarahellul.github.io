@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>class</title>
+    <title></title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -17,30 +17,18 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style media="screen">
-    .height1{
-      height: 400px;
-    }
-    .height2{
-      height: 50px;
-    }
-    .cyan{
-      background-color: cyan;
-    }
-    .purple{
-      background-color: purple;
-    }
-    .pink{
-      background-color: pink;
-    }
+      .height1{
+        height: 50px;
+      }
+      .height2{
+        height: 300px;
+      }
     </style>
   </head>
   <body>
 <div class="container">
   <div class="row">
-    <div class="col-md-3 height1 randomColor">
-
-    </div>
-    <div class="col-md-9 height1 randomColor">
+    <div class="col-md-12 height1 randomColor">
 
     </div>
 
@@ -51,26 +39,59 @@
     </div>
 
   </div>
+  <div class="row">
+    <div class="col-md-3 height1 randomColor">
+
+    </div>
+    <div class="col-md-3 height1 randomColor">
+
+    </div>
+    <div class="col-md-3 height1 randomColor">
+
+    </div>
+    <div class="col-md-3 height1 randomColor">
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 height1 randomColor">
+
+    </div>
+    <div class="col-md-3 height1 randomColor">
+
+    </div>
+    <div class="col-md-3 height1 randomColor">
+
+    </div>
+    <div class="col-md-3 height1 randomColor">
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-12 height1 randomColor">
+
+    </div>
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
- <script type="text/javascript">
-   $(document).ready(function() {
-     //get a random color between 0 and 255
-     function getRandomColor() {
-       return Math.floor(Math.random() * 255);
-     }
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //get a random color between 0 and 255
+        function getRandomColor() {
+          return Math.floor(Math.random() * 255);
+        }
 
-     var randomColor = $(".randomColor");
+        var randomColor = $(".randomColor");
 
-     $.each(randomColor, function(index, item) {
-       $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
-     })
+        $.each(randomColor, function(index, item) {
+          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+        })
 
-   })
- </script>
+      })
+    </script>
   </body>
 </html>
