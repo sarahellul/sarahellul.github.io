@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Week5</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style media="screen">
+      .height1{
+        height: 100px;
+      }
+      .height2{
+        height: 600px;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 randomColor">
+
+      </div>
+
+    </div>
+  <div class="row">
+    <div class="col-md-2 height2 randomColor">
+
+    </div>
+    <div class="col-md-8 height2 myConsole">
+
+    </div>
+    <div class="col-md-2 height2 randomColor">
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-12 height1 randomColor">
+
+    </div>
+
+  </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //get a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      var randomColor = $(".randomColor");
+
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+
+
+    var anotherArray = [];
+
+    anotherArray.push("someData");
+    anotherArray.push(4866);
+
+    console.log("the value of anotherArray: " + anotherArray);
+
+    var myArray = ["testing", "this", "is", "an", "array"];
+
+    console.log("the value at index 2 : " + myArray[2]);
+
+    var numberArray = [97,18,26,32,8,3,75,66,43,57];
+
+    console.log("numberArray" + numberArray);
+    console.log("the number of elements in numberArray" + numberArray.length);
+    console.log("with some text in between:" +numberArray.join(";"));
+
+    //var sum = numberArray[0]+numberArray[1]//
+var sum = 0;
+
+    for (var i=0;i<numberArray.length;i=i+1){
+      console.log("the current index is "+i);
+      console.log("the value at index" +i+ "is" +numberArray[i])
+
+      sum = sum + numberArray[i];
+      console.log("the current sum is" +sum);
+    }
+
+    console.log("the average is" + (sum/numberArray.length));
+
+var wordArray = ["hey","what","is","up","you","guys","yes","!"];
+
+console.log("wordArray" + wordArray);
+console.log("the number of elements in wordArray" + wordArray.length);
+console.log("with some text in between:" +wordArray.join(";"));
+
+var fullSentence = " ";
+
+for (var j=0;j<wordArray.length;j=j+1){
+
+  fullSentence = fullSentence + wordArray[j]+" ";
+}
+
+console.log("the full sentence is" +fullSentence);
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+  $(".myConsole").html("the full sentence is" +fullSentence);
+
+  $(".myConsole").append("<h1>here is another sentence</h1>");
+
+  $(".myConsole").prepend("<div class= 'boldRed' > Text before all </div>");
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
