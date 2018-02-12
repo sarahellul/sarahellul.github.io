@@ -77,7 +77,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       function writeToCenter(str) {
-        $(".myConsole").append(str);
+        $(".myConsole").append("<br>"+str);
 
       }
 
@@ -92,7 +92,7 @@
       var thirdNumber = addNumbers(firstNumber, secondNumber);
 
       writeToCenter("third number is " + thirdNumber);
-
+      writeToCenter("another number is " + addNumbers(6,9));
     })
   </script>
 </body>
