@@ -76,8 +76,16 @@
   </script>
   <script type="text/javascript">
     $(document).ready(function() {
+
+
+
       function writeToCenter(str) {
-        $(".myConsole").append("<br>"+str);
+        $(".myConsole").append("<br>" + str);
+
+      }
+
+      function writeObjectToCenter(obj) {
+        $(".myConsole").append("<br>" + JSON.stringify(obj));
 
       }
 
@@ -92,7 +100,28 @@
       var thirdNumber = addNumbers(firstNumber, secondNumber);
 
       writeToCenter("third number is " + thirdNumber);
-      writeToCenter("another number is " + addNumbers(6,9));
+      writeToCenter("another number is " + addNumbers(6, 9));
+
+      var myMan = {
+        "name": "Patrelli",
+        "style": "victorian",
+        "hair colour": "white",
+        "gender": "man",
+        "ethnicity": "caucassion"
+      };
+
+      myMan.age = "old";
+      myMan.sideburns = "long";
+      myMan.isBeautiful = false;
+      myMan.face = ["eyes","ears","nose","mouth","etc."];
+      writeObjectToCenter(myMan);
+
+      for (var key in myMan) {
+        writeToCenter("this key is: " + key + " and the value is " + myMan[key]);
+      }
+
+      writeToCenter(" here is a value " + myMan["name"]);
+      writeToCenter(" here is a value " + myMan.style);
     })
   </script>
 </body>
