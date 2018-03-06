@@ -17,52 +17,37 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-<script>
-[
-  {
-    "name":"Ariel",
-    "hairColor":"Red",
-    "location":"Atlantica",
-    "prince":"Eric",
-    "sidekick":"Flounder",
-    "villain":"Ursula"
-  },
-  {
-    "name":"Cinderella",
-    "hairColor":"Blonde",
-    "location":"England",
-    "prince":"Prince Charming",
-    "sidekick":"Fairy Godmother",
-    "villain":"Evil Step-Mother and Step-Sisters"
-  },
-  {
-    "name":"Jasmine",
-    "hairColor":"Black",
-    "location":"Agrabah",
-    "prince":"Aladdin",
-    "sidekick":"Raja",
-    "villain":"Jafar"
-  },
-  {
-    "name":"Snow White",
-    "hairColor":"Black",
-    "location":"Germany",
-    "prince":"Prince",
-    "sidekick":"The Seven Dwarfs",
-    "villain":"Evil Queen"
-  },
-  {
-    "name":"Belle",
-    "hairColor":"Brown",
-    "location":"France",
-    "prince":"Beast",
-    "sidekick":"Chip",
-    "villain":"Gaston"
-  }
 
-]
-</script>
+  <body>
+    <script>
+      var url = "https://raw.githubusercontent.com/sarahellul/sarahellul.github.io/master/class/week8/assets/myJSON.json";
+
+      $.getJSON(url).done(function(data) {
+        console.log("success! ");
+        console.dir(data);
+
+        var dataHtml = "";
+        for (var i = 0; i < data.length; i++) {
+
+          dataHtml += '<div class="' + data[i].class + '">' +
+            '<img src="' + data[i].source + '" alt="">' +
+            '<div class="I dont remember what picture this is">' +
+            data[i].caption +
+            '</div>' +
+            '</div>';
+
+        }
+
+
+        $(document).ready(function() {
+          $(".carousel-inner").html(dataHtml);
+          $(".carousel").carousel();
+        })
+
+      }).fail(function(data) {
+        console.log("failed! " + JSON.stringify(data));
+      });
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

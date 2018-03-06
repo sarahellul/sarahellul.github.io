@@ -1,0 +1,43 @@
+[
+  {
+    "name":"Ariel",
+    "hairColor":"Red",
+    "location":"Atlantica",
+    "prince":"Eric",
+    "sidekick":"Flounder",
+    "villain":"Ursula"
+  },
+  {
+    "name":"Cinderella",
+    "hairColor":"Blonde",
+    "location":"England",
+    "prince":"Prince Charming",
+    "sidekick":"Fairy Godmother",
+    "villain":"Evil Step-Mother and Step-Sisters"
+  },
+  {
+    "name":"Jasmine",
+    "hairColor":"Black",
+    "location":"Agrabah",
+    "prince":"Aladdin",
+    "sidekick":"Raja",
+    "villain":"Jafar"
+  },
+  {
+    "name":"Snow White",
+    "hairColor":"Black",
+    "location":"Germany",
+    "prince":"Prince",
+    "sidekick":"The Seven Dwarfs",
+    "villain":"Evil Queen"
+  },
+  {
+    "name":"Belle",
+    "hairColor":"Brown",
+    "location":"France",
+    "prince":"Beast",
+    "sidekick":"Chip",
+    "villain":"Gaston"
+  }
+
+]
