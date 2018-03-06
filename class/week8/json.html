@@ -19,8 +19,19 @@
   </head>
 
   <body>
+    <div class="container">
+      <div class="row">
+          <div class="output">
+
+          </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-      var url = "https://raw.githubusercontent.com/sarahellul/sarahellul.github.io/master/class/week8/assets/myJSON.json";
+      var url = "https://sarahellul.github.io/class/week8/assets/myJSON.json";
 
       $.getJSON(url).done(function(data) {
         console.log("success! ");
@@ -29,28 +40,26 @@
         var dataHtml = "";
         for (var i = 0; i < data.length; i++) {
 
-          dataHtml += '<div class="' + data[i].class + '">' +
-            '<img src="' + data[i].source + '" alt="">' +
-            '<div class="I dont remember what picture this is">' +
-            data[i].caption +
-            '</div>' +
-            '</div>';
+        console.log("i" + i);
+        dataHtml+="<div>"+data[i].name+"</div>"
+        +"<div>"+data[i].hairColor+"</div>"
+        +"<div>"+data[i].location+"</div>"
+        +"<div>"+data[i].prince+"</div>"
+        +"<div>"+data[i].sidekick+"</div>"
+        +"<div>"+data[i].villain+"</div>"
 
         }
 
 
         $(document).ready(function() {
-          $(".carousel-inner").html(dataHtml);
-          $(".carousel").carousel();
+          $(".output").html(dataHtml);
+
         })
 
       }).fail(function(data) {
         console.log("failed! " + JSON.stringify(data));
       });
     </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
   </body>
 </html>
