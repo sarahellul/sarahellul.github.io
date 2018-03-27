@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cards Website Template</title>
   <style media="screen">
+
     .outputArray {
+      padding-top: 75px;
+      padding-bottom: 75px;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -22,30 +25,35 @@
     }
 
     .itemButton{
-      text-align: right;
+      text-align: center;
       padding: 10px;
     }
     .height1{
       height: 150px;
+      width: 150px;
     }
     .cities{
       font-size: 75px;
       font-family: monospace;
       text-align: center;
       color: white;
+      padding-top: 10px;
     }
     .height2{
       height: 30px;
+      width: 150px;
     }
     .gray{
       background-color: gray;
     }
     .cyan{
-      background-color: cyan;
+      background-color: salmon;
     }
+
     nav ul li{
       text-decoration-style: none;
       display: inline-block;
+      padding-top: 5px;
 
 }
     nav ul{
@@ -58,6 +66,10 @@
   }
   .padding{
     padding-top: 20px;
+  }
+  .footer{
+    padding-top: 5px;
+    text-align: center;
   }
   </style>
 
@@ -123,7 +135,7 @@
           "Location": "Toronto",
           "Country": "Canada",
           "Population": "2 Million",
-        //  "imgUrl": "http://via.placeholder.com/300x300",
+        "imgUrl": "http://sarahellul.github.io/presentations/week11/img/glamour-toronto-skyline-poster-and-cool-ideas-of-photograph-by-elena-elisseeva-posters-6-128x128.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
@@ -131,7 +143,7 @@
           "Location": "Tokyo",
           "Country": "Japan",
           "Population": "13 Million",
-        //  "imgUrl": "http://via.placeholder.com/300x300",
+        "imgUrl": "http://sarahellul.github.io/presentations/week11/img/images.jpeg",
           "button": "More Info" //if u wish to do buttons
         },
 
@@ -139,7 +151,7 @@
           "Location": "Los Angeles",
           "Country": "USA",
           "Population": "3.9 Million",
-        //  "imgUrl": "http://via.placeholder.com/300x300",
+         "imgUrl": "http://sarahellul.github.io/presentations/week11/img/cityscape-view-of-los-angeles-winter-time-,1104043.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
@@ -147,7 +159,7 @@
           "Location": "Paris",
           "Country": "France",
           "Population": "2 Million",
-        //"imgUrl": "http://via.placeholder.com/300x300",
+        "imgUrl": "http://sarahellul.github.io/presentations/week11/img/better-than-a-postcard-bonjour-paris-lebanon-be-9-3-2017-1-37-51-am-t.jpg",
           "button": "More Info" //if u wish to do buttons
         }
       ];
@@ -166,7 +178,7 @@
 
         for (var i = 0; i < arrayTopic.length; i++) { //change arrayTopic to whatever you
           html += "<div class='panel panel-default individualCard'>" +
-          //  "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
+          "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
             "<div class='cardInfo LocationLabel'>" + arrayTopic[i].Location + "</div>" + //change the red text to the keys in your Array
             "<div class='cardInfo CountryLabel'>" + arrayTopic[i].Country + "</div>" + //change the red text to the keys in your Array
             "<div class='cardInfo PopulationLabel'>" + arrayTopic[i].Population + "</div>" + //change the red text to the keys in your Array
