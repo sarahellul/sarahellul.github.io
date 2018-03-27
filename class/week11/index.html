@@ -124,8 +124,10 @@ function getOptions(){
 
   var options = {
         "Anderson 1": "https://andersonguelphjs.github.io/class/week11/myJSON.json",
-        "Anderson 2": "https://andersonguelphjs.github.io/class/week11/myJSON2.json"
+        "Anderson 2": "https://andersonguelphjs.github.io/class/week11/myJSON2.json",
+        "Musicals": "https://sarahellul.github.io/class/week11/musicals.JSON"
       };
+
 //loop through subject
 for(var key in options){
   html+="<option value='"+options[key]+"'>"+key+"</option>"
@@ -181,10 +183,11 @@ function writeJSONToDom(d){
 
 
     for (key in d[jsonObj]){//loop through the keys of each object
+      var str=String(d[jsonObj][key]);
       if (key==="itemId"){
         continue;
       }
-      if (d[jsonObj][key].indexOf("github")!==-1){
+      if (str.indexOf("github")!==-1){
         // if github text appears in the value
         html+="<div class='imageContainer'><img src='https://"+d[jsonObj][key]+"'></div>";
       }
@@ -209,7 +212,7 @@ $(document).ready(function(){
   getOptions();
   getAds();
   initEvents();
-  $(".selectJSON").find("select").change();
+  $(".selectContainer").find("select").change();
   $("body").fadeIn();
 
 })
