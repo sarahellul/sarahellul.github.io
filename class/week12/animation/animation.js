@@ -164,7 +164,115 @@ var spriteImages = [{
     "width": 1928,
     "height": 240,
     "name": "stitch"
+  },
+
+{
+    "spriteMapUrl": "https://celiafosch.github.io/class/week12/animation/images/henry.png",
+    "numFrames": 5,
+    "width": 480,
+    "height": 480,
+    "name": "Henry"
+  },
+
+
+  {
+    "spriteMapUrl": "https://loucasl.github.io/class/week12/animation/images/ari.png",
+    "numFrames": 7,
+    "width": 3134,
+    "height": 422,
+    "name": "ari"
+  },
+
+  {
+    "spriteMapUrl": "https://sluu01.github.io/class/week12/animation/images/iceCream2.png",
+    "numFrames": 5,
+    "width": 2500,
+    "height": 1259,
+    "name": "dessert"
+  },
+
+
+{
+    "spriteMapUrl":"https://biancabottos.github.io/class/week12/animation/images/sun.png",
+    "numFrames": 6,
+    "width": 500,
+    "height": 100,
+    "name": "sun"
+  },
+
+
+
+  {
+    "spriteMapUrl": "https://sydneygang.github.io/class/images/walk.png",
+    "numFrames": 8,
+    "width": 1472,
+    "height": 325,
+    "name": "walk"
+  },
+{    "spriteMapUrl":"https://julianneferr.github.io/class/week12/animation/images/lightbulb.png",
+    "numFrames": 7,
+    "width": 1000,
+    "height": 200,
+    "name": "lightbulb"
+  },
+
+
+{
+    "spriteMapUrl": "https://amiraarshad.github.io/class/week12/animation/images/liam.png",
+    "numFrames": 7,
+    "width": 2732,
+    "height":1417,
+    "name": "liam"
+  },
+{
+    "spriteMapUrl" : "https://asukalap.github.io/class/week12/animation/images/heartbeat.png",
+    "numFrames": 10,
+    "width": 1000,
+    "height": 100,
+    "name": "heartbeat"
+  },
+
+
+{
+    "spriteMapUrl":"https://kiannagram.github.io/class/week12/animation/images/ARTZU.png",
+    "numFrames": 7,
+    "width": 2100,
+    "height": 694,
+    "name": "colour goat"
+  },
+{
+    "spriteMapUrl": "https://katnjo.github.io/class/week12/animation/images/sprite.png",
+    "numFrames": 10,
+    "width": 1000,
+    "height": 100,
+    "name": "ball"
+  },
+
+{
+  "spriteMapUrl":"https://chell-github.github.io/class/week12/images/masae.png",
+    "numFrames": 29,
+    "width": 2900,
+    "height": 100,
+    "name": "masae"
+  },
+
+  {
+      "spriteMapUrl": "https://jresur01.github.io/class/week12/animation/images/steven.png",
+      "numFrames": 7,
+      "width": 1023,
+      "height": 145,
+      "name": "steven"
+    },
+
+{
+    "spriteMapUrl":"https://alissavalentina.github.io/class/week12/animation/images/winnie2.png",
+    "numFrames": 10,
+    "width": 919 ,
+    "height": 100,
+    "name":"winnie the pooh"
   }
+
+
 ];
 var animations = []; //an array to hold the currently existing sprite obects
 var maxAnimations = spriteImages.length; //how many animations we want on the screen at any one time
