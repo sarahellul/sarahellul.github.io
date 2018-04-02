@@ -175,13 +175,26 @@ var formUrl= "https://sarahellul.github.io/class/week12/partial.html";
       console.log("fail get select json! ");
       console.dir(data);
 })
-$(document).ready(function() {
-  getOptions();
-  getAds();
-  initEvents();
-  $(".selectContainer").find("select").change();
-  $("body").fadeIn();
+$("body").on("click",".buyButton", function(){
+  console.log("clicked buy!");
+  //closest goes up the tree to find the first match
+  var thisItem = $(this).closest(".itemContainer");
+  var itemId = $(this).attr("data-id");
+
+  //write this item + form html
+var html = "<div data-id='"+itemId+"' class='itemContainer'>"+thisItem.html()+"</div>"+formHtml;
+
+$(".output").html(html);
+
+//prevent multiple click events
+  return false;
 })
+
+
+//$(".buyButton").on("click", function(){
+//  console.log("clicked buy!");
+//})
+
   </script>
 </body>
 
